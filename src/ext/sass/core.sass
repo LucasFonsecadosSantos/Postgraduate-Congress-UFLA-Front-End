@@ -1,0 +1,217 @@
+///////////////////////////////////////////////////////////////////////////////////
+///                                                                             ///
+///                                                                             ///
+///                                                                             ///
+///                                                                             ///
+///   Project by:                                                               ///
+///    _      _____ ______    _____ ____  __  __ _____        _   ___     __    ///
+///   | |    / ____|  ____|  / ____/ __ \|  \/  |  __ \ /\   | \ | \ \   / /    ///
+///   | |   | |    | |__    | |   | |  | | \  / | |__) /  \  |  \| |\ \_/ /     ///
+///   | |   | |    |  __|   | |   | |  | | |\/| |  ___/ /\ \ | . ` | \   /      ///
+///   | |___| |____| |      | |___| |__| | |  | | |  / ____ \| |\  |  | |       ///
+///   |______\_____|_|       \_____\____/|_|  |_|_| /_/    \_\_| \_|  |_|       ///
+///   Assessoria em tecnologia e marketing.                                     ///
+///                                                                             ///
+///                                                                             ///
+///                                                                             ///
+///                                                                             ///
+///////////////////////////////////////////////////////////////////////////////////
+///                                                                             ///
+/// [PROJECT]: Name: Congresso da Pós Graduação.                                ///
+///            URL:  www.----.ufla.br                                           ///
+///            GIT:  <Link não disponivel. GIT server privado>                  ///
+/// +-------------------------------------------------------------------------+ ///
+///                                                                             ///
+/// [DEVELOPMENT]:  Code Developer:   Lucas Fonseca dos Santos.                 ///
+///                 System Developer: Lucas Fonseca dos Santos.                 ///
+///                 Design Creater:   Lucas Fonseca dos Santos.                 ///
+///                 Tester:           Lucas Fonseca dos Santos.                 ///
+/// +-------------------------------------------------------------------------+ ///
+///                                                                             ///
+/// [INFORMATIONS]: Fonts:  Ubuntu, 300, 400, 500, 700                          ///
+///                         Open Sans, 300, 400, 600, 700                       ///
+///                         Open Sans Condensed, 300, 700                       ///
+///                 Colors: #000000                                             ///
+///                         #000000                                             ///
+///                         #000000                                             ///
+///                         #000000                                             ///
+/// +-------------------------------------------------------------------------+ ///
+///                                                                             ///
+///   Use .content to write class .container by bootstrap and .line to write    ///
+///   .row class by bootstrap.                                                  ///
+///                                                                             ///
+///   Use mixin extend_grid() with the params: LG value, MD value, SM value,    ///
+///   XS value in respective order to extend grid system of bootstrap.          ///
+///                                                                             ///
+///////////////////////////////////////////////////////////////////////////////////
+
+///////////////////////////////////////////////////////////////////////////////////
+///                              FILE INFORMATION                               ///
+///-----------------------------------------------------------------------------///
+/// [NAME]: Core                                                                ///
+/// [CONTENT]: Responsible for all front end struct.                            ///
+///////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+*
+   font-size: 100%
+   margin:    0px auto
+   padding:   0px
+
+
+
+
+
+body
+   overflow-x: hidden
+
+
+
+
+//----------------------------------[ IMPORTS ]----------------------------------//
+@import "libs/_bootstrap.scss"
+@import "variables.sass"
+@import "https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Open+Sans:300,400,600,700|Ubuntu:300,400,500,700"
+//-------------------------------------------------------------------------------//
+
+
+
+
+
+//----------------------------------[ MIXINS ]-----------------------------------//
+@mixin transform_translateX($param)
+   transform:           translateX($param)
+   -o-transform:        translateX($param)
+   -ms-transform:       translateX($param)
+   -moz-transform:      translateX($param)
+   -webkit-transform:   translateX($param)
+
+@mixin transform_translateY($param)
+   transform:           translateY($param)
+   -o-transform:        translateY($param)
+   -ms-transform:       translateY($param)
+   -moz-transform:      translateY($param)
+   -webkit-transform:   translateY($param)
+
+@mixin border_radius($param)
+   border-radius:         $param
+   -o-border-radius:      $param
+   -ms-border-radius:     $param
+   -moz-border-radius:    $param
+   -webkit-border-radius: $param
+
+@mixin gradient_background($param1, $param2, $param3)
+   background: $param2
+   linear-gradient($param1, $param2 , $param3)
+   -o-linear-gradient($param1, $param2 , $param3)
+   -ms-linear-gradient($param1, $param2 , $param3)
+   -moz-linear-gradient($param1, $param2 , $param3)
+   -webkit-linear-gradient($param1, $param2 , $param3) 
+
+@mixin horizontal_div_divider_1($param1, $param2)
+   border-bottom: 100vh $param1 solid
+   border-top:    0vh solid transparent 
+   border-right:  $param2 20vw solid
+   border-left:   0px $param2 solid
+
+@mixin horizontal_div_divider_2($param1, $param2)
+   border-bottom: 0vh solid transparent
+   border-top:    100vh $param1 solid
+   border-right:  0px $param2 solid
+   border-left:   $param2 20vw solid
+
+@mixin filter($param)
+   filter:         $param
+   -o-filter:      $param
+   -ms-filter:     $param
+   -moz-filter:    $param
+   -webkit-filter: $param
+
+@mixin responsive_system($param1, $param2, $param3, $param4)
+   @extend .col-lg-#{$param1}
+   @extend .col-md-#{$param2}
+   @extend .col-sm-#{$param3}
+   @extend .col-xs-#{$param4}
+//-------------------------------------------------------------------------------//
+
+
+
+
+
+//----------------------------------[ FONTS ]------------------------------------//
+h1
+h2
+h3
+h4
+h5
+label
+a
+p
+//-------------------------------------------------------------------------------//
+
+
+
+
+
+//-----------------------------------[ FORMS ]-----------------------------------//
+input, textarea
+button
+//-------------------------------------------------------------------------------//
+
+
+
+
+
+//----------------------------------[ SUPERCLASS ]-------------------------------//
+.transitions
+   transition:          $animation_time
+   -o-transition:       $animation_time
+   -ms-transition:      $animation_time
+   -moz-transition:     $animation_time
+   -webkit-transition:  $animation_time
+
+.content
+    @extend .container
+
+.line 
+    @extend .row
+
+//-------------------------------------------------------------------------------//
+
+
+
+
+
+//----------------------------------[ SECTIONS ]---------------------------------//
+
+//+++++++++++++++++++++Header++++++++++++++++++++++//
+header
+//++++++++++++++++++End of header++++++++++++++++++//
+
+//+++++++++++++++++++++Footer++++++++++++++++++++++//
+footer
+//++++++++++++++++++End of Footer++++++++++++++++++//
+
+//+++++++++++++++++++++Index01+++++++++++++++++++++//
+#index01
+//+++++++++++++++++++++End of Index01++++++++++++++//
+
+//-------------------------------------------------------------------------------//
+
+
+
+
+//----------------------------------[ RESPONSIVE COND. ]-------------------------//
+//@media screen and (min-width: 1921px)
+//@media screen and (max-width: 1750px) and (min-width: 1550px)
+//@media screen and (max-width: 1549px) and (min-width: 1350px)
+//@media screen and (max-width: 1349px) and (min-width: 1200px)
+//@media screen and (max-width: 1199px) and (min-width: 992px)
+//@media screen and (max-width: 991px) and (min-width: 768px)
+//@media screen and (max-width: 767px) and (min-width: 550px)
+//@media screen and (max-width: 549px) and (min-width: 350px)
+//@media screen and (max-width: 349px)
+//-------------------------------------------------------------------------------//
