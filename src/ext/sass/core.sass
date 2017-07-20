@@ -104,6 +104,13 @@ body
    -moz-border-radius:    $param
    -webkit-border-radius: $param
 
+@mixin transform_rotate($param)
+    transform: rotate($param)
+    -o-transform: rotate($param)
+    -ms-transform: rotate($param)
+    -moz-transform: rotate($param)
+    -webkit--transform: rotate($param)
+
 @mixin gradient_background($param1, $param2, $param3)
    background: $param2
    linear-gradient($param1, $param2 , $param3)
@@ -160,6 +167,7 @@ h5
 label
 a
 p
+    margin: 0px
 //-------------------------------------------------------------------------------//
 
 
@@ -210,6 +218,15 @@ header
         @include border_radius(0px)
         background: none
         border: none
+        .navbar-nav
+            li 
+                a
+                    font:
+                        family: $__FONT__text1_ !important
+                        weight: 500 !important
+                    color: $__COLOR__white_
+                    text:
+                        transform: lowercase
         .navbar-brand
             color: $__COLOR__white_ !important
             text: 
@@ -227,6 +244,11 @@ header
         @include transform_translateY(100%)
         position: relative
         display: block
+        .headerButton
+            @include transform_rotate(90deg)
+            cursor: pointer
+            with: 50px
+            height: 50px
         .subHeaderContent
             @include responsive_system(6,6,6,6)
             h1
@@ -236,6 +258,7 @@ header
                     @include transform_translateY(-14.5%)
                     text-align: right !important
                     font-size: 20em !important
+                &
 
 //++++++++++++++++++End of header++++++++++++++++++//
 
@@ -243,9 +266,12 @@ header
 footer
     min-height: $__HEIGHT__footer_
     height: auto
+    background: $__COLOR__dark-gray_
 
 #copyright
+    background: $__COLOR__light-gray_ !important
     @extend .text-center
+    height: 50px
 //++++++++++++++++++End of Footer++++++++++++++++++//
 
 //+++++++++++++++++++++Index01+++++++++++++++++++++//
