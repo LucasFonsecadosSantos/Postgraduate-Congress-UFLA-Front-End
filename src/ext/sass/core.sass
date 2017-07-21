@@ -161,6 +161,14 @@ h1
     color: $__COLOR__white_
     margin: 0px
 h2
+    position: relative
+    font:
+        family: $__FONT__text1_
+        weight: 800
+        size: 1.8em
+    text:
+        transform: uppercase
+    margin: 0px
 h3
 h4
 h5
@@ -168,6 +176,11 @@ label
 a
 p
     margin: 0px
+    font:
+        family: $__FONT__text1_
+        weight: 100
+        size: 1.2em
+    text-align: left
 //-------------------------------------------------------------------------------//
 
 
@@ -197,6 +210,29 @@ button
 .line 
     @extend .row
 
+.titleSection
+    //@extend .line
+    @extend .text-center
+    margin-bottom: 35px
+    h2
+       position: relative
+       padding-bottom: 2px
+       text-decoration: none
+       text-transform: uppercase
+       padding: 0px 0px 10px 0px
+       color: $__COLOR__light-gray_
+       &::first-letter
+          text-transform: uppercase
+       &::after
+          content: ""
+          position: absolute
+          bottom: 0px
+          left: 0
+          height: 1px
+          width: 100%
+          background: #444
+          background: linear-gradient(left, transparent 0%,#444 50%,transparent 100%)
+          background: -moz-linear-gradient(left, transparent 0%,#444 50%,transparent 100%)
 
 //-------------------------------------------------------------------------------//
 
@@ -241,7 +277,7 @@ header
                 right:  none
                 left:   none
     .headerContent
-        @include transform_translateY(100%)
+        @include transform_translateY(90%)
         position: relative
         display: block
         .headerButton
@@ -249,6 +285,8 @@ header
             cursor: pointer
             with: 50px
             height: 50px
+            position: relative
+            
         .subHeaderContent
             @include responsive_system(6,6,6,6)
             h1
@@ -257,7 +295,7 @@ header
                 &[class="s0"]
                     @include transform_translateY(-14.5%)
                     text-align: right !important
-                    font-size: 20em !important
+                    font-size: 20em //!important
                 &
 
 //++++++++++++++++++End of header++++++++++++++++++//
@@ -280,19 +318,170 @@ footer
     height: auto
 //+++++++++++++++++++++End of Index01++++++++++++++//
 
+//+++++++++++++++++++++Index03+++++++++++++++++++++//
+#index03
+    padding: $__PADDING-DEFAULT__
+    min-height: $__HEIGHT__index03_
+    height: auto
+    background: #ECE9E6
+    background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6)
+    background: linear-gradient(to right, #FFFFFF, #ECE9E6)
+    .subIndex03
+        @include responsive_system(6,6,12,12)
+        &:first-child
+            p
+                &:first-letter
+                    text-transform: uppercase !important
+        &:last-child
+            @extend .text-center
+//+++++++++++++++++++++End of Index03++++++++++++++//
+
+//+++++++++++++++++++++Index05+++++++++++++++++++++//
+#index05
+    padding: $__PADDING-DEFAULT__
+    min-height: $__HEIGHT__index05_
+    height: auto
+    background: #ECE9E6
+    background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6)
+    background: linear-gradient(to right, #FFFFFF, #ECE9E6)
+    .subIndex05
+//+++++++++++++++++++++End of Index05++++++++++++++//
+
 //-------------------------------------------------------------------------------//
 
 
 
 
 //----------------------------------[ RESPONSIVE COND. ]-------------------------//
-//@media screen and (min-width: 1921px)
-//@media screen and (max-width: 1750px) and (min-width: 1550px)
-//@media screen and (max-width: 1549px) and (min-width: 1350px)
-//@media screen and (max-width: 1349px) and (min-width: 1200px)
-//@media screen and (max-width: 1199px) and (min-width: 992px)
-//@media screen and (max-width: 991px) and (min-width: 768px)
-//@media screen and (max-width: 767px) and (min-width: 550px)
-//@media screen and (max-width: 549px) and (min-width: 350px)
-//@media screen and (max-width: 349px)
+@media screen and (min-width: 1921px)
+    h1
+        font-size: 2em !important
+    h2
+        font-size: 1.8em !important
+@media screen and (max-width: 1750px) and (min-width: 1550px)
+    h1
+        font-size: 5em !important
+    h2
+        font-size: 1.8em !important
+    header
+        h1
+            &[class="s0"]
+                font-size: 20em !important
+    #index03
+        iframe
+            text-align: center !important
+        .subIndex03
+            p
+                text-align: left !important
+
+@media screen and (max-width: 1549px) and (min-width: 1350px)
+    h1
+        font-size: 5em !important
+    h2
+        font-size: 1.8em !important
+    header
+        h1
+            &[class="s0"]
+                font-size: 20em !important
+    #index03
+        iframe
+            text-align: center !important
+        .subIndex03
+            p
+                text-align: left !important
+
+@media screen and (max-width: 1349px) and (min-width: 1200px)
+    h1
+        font-size: 5em !important
+    h2
+        font-size: 1.8em !important
+    header
+        h1
+            &[class="s0"]
+                font-size: 20em !important
+    #index03
+        iframe
+            text-align: center !important
+        .subIndex03
+            p
+                text-align: left !important
+
+
+@media screen and (max-width: 1199px) and (min-width: 992px)
+    h1
+        font-size: 3.5em !important
+    h2
+        font-size: 1.8em !important
+    header
+        h1
+            &[class="s0"]
+                font-size: 14em !important
+    #index03
+        iframe
+            text-align: center !important
+        .subIndex03
+            p
+                text-align: left !important
+
+@media screen and (max-width: 991px) and (min-width: 768px)
+    h1
+        font-size: 3.5em !important
+    h2
+        font-size: 1.8em !important
+    header
+        h1
+            &[class="s0"]
+                font-size: 14em !important
+    #index03
+        .subIndex03
+            p
+                text-align: center !important
+            padding: 3% 7% 3% 7%
+
+@media screen and (max-width: 767px) and (min-width: 550px)
+    h1
+        font-size: 3em !important
+    h2
+        font-size: 1.8em !important
+    header
+        h1
+            &[class="s0"]
+                font-size: 12em !important
+    #index03
+        p
+            text-align: center !important
+        .subIndex03
+            padding: 3% 7% 3% 7%
+
+@media screen and (max-width: 549px) and (min-width: 350px)
+    h1
+        font-size: 2em !important
+    h2
+        font-size: 1.8em !important
+    header
+        h1
+            &[class="s0"]
+                font-size: 8em !important
+    #index03
+        .subIndex03
+            p
+                text-align: center !important
+            padding: 3% 7% 3% 7%
+
+@media screen and (max-width: 349px)
+    h1
+        font-size: 1em !important
+    h2
+        font-size: 1.2em !important
+    p
+        font-size: 1em !important
+    header
+        h1
+            &[class="s0"]
+                font-size: 4em !important
+    #index03
+        .subIndex03
+            p
+                text-align: center !important
+            padding: 3% 7% 3% 7%
 //-------------------------------------------------------------------------------//
