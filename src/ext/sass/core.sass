@@ -67,6 +67,9 @@
 
 body
    overflow-x: hidden
+   
+main
+   background: #afc3fd
 
 
 
@@ -158,7 +161,7 @@ h1
         size: 5em
     text:
         transform: uppercase
-    color: $__COLOR__white_
+    color: #FFF//$__COLOR__white_
     margin: 0px
 h2
     position: relative
@@ -233,9 +236,34 @@ button
           background: #444
           background: linear-gradient(left, transparent 0%,#444 50%,transparent 100%)
           background: -moz-linear-gradient(left, transparent 0%,#444 50%,transparent 100%)
+          background: -o-linear-gradient(left, transparent 0%,#444 50%,transparent 100%)
+          background: -webkit-linear-gradient(left, transparent 0%,#444 50%,transparent 100%)
+          background: -ms-linear-gradient(left, transparent 0%,#444 50%,transparent 100%)
 
 .menuSecond
     background: #F00 !important
+
+.divider01
+    min-height: 300px
+    height: 300px
+    overflow: hidden
+    margin: 0px
+    @include transform_translateY(-100%)
+    border-top: 300px solid transparent
+    border-left: 50vw solid #afc3fd !important
+    border-right: 50vw solid #afc3fd !important
+    border-bottom: none
+
+.divider02
+    min-height: 300px
+    height: 300px
+    overflow: hidden
+    margin: 0px
+    border-top: 300px solid #afc3fd
+    border-left: 50vw solid $__COLOR__dark-gray_ !important
+    border-right: 50vw solid $__COLOR__dark-gray_ !important
+    border-bottom: none
+    z-index: 10 !important
 //-------------------------------------------------------------------------------//
 
 
@@ -249,9 +277,11 @@ header
     @extend .text-center
     min-height: $__HEIGHT__header_
     height: auto
+    // background-image: url('http://www.ufla.br/ascom/wp-content/uploads/2011/08/Reitoria_arerea_montagem1.jpg'), linear-gradient(to right, #2948ff, #396afc)
+    // background-size: cover
     background: #396afc
-    background: -webkit-linear-gradient(to right, #2948ff, #396afc)
-    background: linear-gradient(to right, #2948ff, #396afc)
+    background: -webkit-linear-gradient(to right, #2948ff, #396afc), url('http://www.ufla.br/ascom/wp-content/uploads/2011/08/Reitoria_arerea_montagem1.jpg')
+    background: linear-gradient(to right, #2948ff, #396afc), url('http://www.ufla.br/ascom/wp-content/uploads/2011/08/Reitoria_arerea_montagem1.jpg')
     .menu
         @include border_radius(0px)
         background: none
@@ -315,10 +345,33 @@ footer
 //++++++++++++++++++End of Footer++++++++++++++++++//
 
 //+++++++++++++++++++++Index01+++++++++++++++++++++//
-#index01
-    min-height: $__HEIGHT__index01_
+#index01 //#afc3fd
+    min-height: auto
     height: auto
+    background: #afc3fd
+    .subIndex01
+        @include responsive_system(4,4,4,4)
+        p
+            text-align: center !important
+        .fix
+            @include transform_translateY(5%)
+            margin-top: -80%
+            img
+                @extend .text-center
+                @extend .img-responsive
+                width: 350px
+                height: 450px
+                z-index: -10
+                background: red
 //+++++++++++++++++++++End of Index01++++++++++++++//
+
+//+++++++++++++++++++++Index02+++++++++++++++++++++//
+#index02
+    min-height: 100vh
+    height: auto
+    background: $__COLOR__dark-gray_
+
+//+++++++++++++++++++++End of Index02++++++++++++++//
 
 //+++++++++++++++++++++Index03+++++++++++++++++++++//
 #index03
@@ -338,6 +391,13 @@ footer
             @extend .text-center
 //+++++++++++++++++++++End of Index03++++++++++++++//
 
+//+++++++++++++++++++++Index04+++++++++++++++++++++//
+#index04
+    height: $__HEIGHT__index04_
+    min-height: auto
+    padding: $__PADDING-DEFAULT__
+//+++++++++++++++++++++End of Index04++++++++++++++//
+
 //+++++++++++++++++++++Index05+++++++++++++++++++++//
 #index05
     padding: $__PADDING-DEFAULT__
@@ -347,6 +407,16 @@ footer
     background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6)
     background: linear-gradient(to right, #FFFFFF, #ECE9E6)
     .subIndex05
+        @include responsive_system(6,6,12,12)
+        &:last-child
+            p
+                &:first-letter
+                    text-transform: uppercase !important
+        &:first-child
+            @extend .text-center
+            img
+                @extend .img-responsive
+                width: 70%
 //+++++++++++++++++++++End of Index05++++++++++++++//
 
 //-------------------------------------------------------------------------------//
