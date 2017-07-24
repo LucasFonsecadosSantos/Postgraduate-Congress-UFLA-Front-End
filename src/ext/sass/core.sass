@@ -350,7 +350,10 @@ footer
     height: auto
     background: #afc3fd
     .subIndex01
-        @include responsive_system(4,4,4,4)
+        @include responsive_system(4,4,12,12)
+        &:first-child, &:last-child
+            @extend .hidden-sm
+            @extend .hidden-xs
         p
             text-align: center !important
         .fix
