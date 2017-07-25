@@ -173,6 +173,14 @@ h2
         transform: uppercase
     margin: 0px
 h3
+    position: relative
+    font:
+        family: $__FONT__text1_
+        weight: 800
+        size: 1.3em
+    text-transform: uppercase
+    color: $__COLOR__white_
+    margin: 0px
 h4
 h5
 label
@@ -184,15 +192,6 @@ p
         weight: 100
         size: 1.2em
     text-align: left
-//-------------------------------------------------------------------------------//
-
-
-
-
-
-//-----------------------------------[ FORMS ]-----------------------------------//
-input, textarea
-button
 //-------------------------------------------------------------------------------//
 
 
@@ -264,7 +263,75 @@ button
     border-right: 50vw solid $__COLOR__dark-gray_ !important
     border-bottom: none
     z-index: 10 !important
+
+.white-title
+    color: $__COLOR__white_ !important
+    &::after
+        background: #FFF !important
+        background: linear-gradient(left, transparent 0%,#FFF 50%,transparent 100%) !important
+        background: -moz-linear-gradient(left, transparent 0%,#FFF 50%,transparent 100%) !important
+        background: -o-linear-gradient(left, transparent 0%,#FFF 50%,transparent 100%) !important
+        background: -webkit-linear-gradient(left, transparent 0%,#FFF 50%,transparent 100%) !important
+        background: -ms-linear-gradient(left, transparent 0%,#FFF 50%,transparent 100%) !important
 //-------------------------------------------------------------------------------//
+
+
+
+
+
+
+//-----------------------------------[ FORMS ]-----------------------------------//
+input, textarea
+button
+table
+    @include responsive_system(12,12,12,12)
+    @extend .hidden-sm
+    @extend .hidden-xs
+    margin: 100px 0px 100px 0px
+    thead
+        tr
+            @extend .text-center
+            width: 100%
+            height: 50px
+            padding: 10% !important
+            background: #396afc !important
+            background: -webkit-linear-gradient(left, #2948ff, #396afc) !important
+            background: -moz-linear-gradient(left, #2948ff, #396afc) !important
+            background: -o-linear-gradient(left, #2948ff, #396afc)
+            background: linear-gradient(to right, #2948ff, #396afc)
+    tbody
+        tr
+            @extend .text-center
+            width:  100%
+            height: 80px
+            border:
+                top:   none
+                left:  none
+                right: none
+                bottom: solid 1px rgba(255,255,255,0.1)
+            &:last-child
+                bottom: none
+            &::after
+                content: ""
+                position: absolute
+                bottom: 0px
+                left: 0
+                height: 1px
+                width: 100%
+                background: #2948ff
+                background: linear-gradient(left, transparent 0%,#2948ff 50%,transparent 100%)
+                background: -moz-linear-gradient(left, transparent 0%,#2948ff 50%,transparent 100%)
+                background: -o-linear-gradient(left, transparent 0%,#2948ff 50%,transparent 100%)
+                background: -webkit-linear-gradient(left, transparent 0%,#2948ff 50%,transparent 100%)
+                background: -ms-linear-gradient(left, transparent 0%,#2948ff 50%,transparent 100%)
+            td
+                p
+                    @extend .white-title
+                    @extend .text-center
+                    &:first-letter
+                        text-transform: uppercase
+//-------------------------------------------------------------------------------//
+
 
 
 
@@ -285,6 +352,7 @@ header
     .menu
         @include border_radius(0px)
         background: none
+        content: ""
         border: none
         .navbar-nav
             li 
@@ -303,11 +371,18 @@ header
                 family: $__FONT__title_ !important
                 weight: 400 !important
         .subMenu
-            border:
-                bottom: solid 1px rgba(250,250,250,0.4)
-                top:    none
-                right:  none
-                left:   none
+            &::after
+                position: absolute
+                bottom: 0px
+                left: 15%
+                height: 1px
+                width: 70%
+                background: #444
+                background: linear-gradient(left, transparent 0%,#444 50%,transparent 100%)
+                background: -moz-linear-gradient(left, transparent 0%,#444 50%,transparent 100%)
+                background: -o-linear-gradient(left, transparent 0%,#444 50%,transparent 100%)
+                background: -webkit-linear-gradient(left, transparent 0%,#444 50%,transparent 100%)
+                background: -ms-linear-gradient(left, transparent 0%,#444 50%,transparent 100%)
     .headerContent
         @include transform_translateY(90%)
         position: relative
@@ -357,15 +432,14 @@ footer
         p
             text-align: center !important
         .fix
-            @include transform_translateY(5%)
+            @include transform_translateY(80%)
             margin-top: -80%
             img
                 @extend .text-center
                 @extend .img-responsive
                 width: 350px
                 height: 450px
-                z-index: -10
-                background: red
+                z-index: -10 !important
 //+++++++++++++++++++++End of Index01++++++++++++++//
 
 //+++++++++++++++++++++Index02+++++++++++++++++++++//
@@ -433,6 +507,7 @@ footer
         font-size: 2em !important
     h2
         font-size: 1.8em !important
+
 @media screen and (max-width: 1750px) and (min-width: 1550px)
     h1
         font-size: 5em !important
