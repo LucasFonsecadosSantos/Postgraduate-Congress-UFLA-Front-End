@@ -122,6 +122,14 @@ main
    -moz-linear-gradient($param1, $param2 , $param3)
    -webkit-linear-gradient($param1, $param2 , $param3) 
 
+@mixin gradient_line($param1, $param2, $param3, $param4)
+   background: $param2
+   linear-gradient($param1, $param2 , $param3)
+   -o-linear-gradient($param1, $param2 , $param3)
+   -ms-linear-gradient($param1, $param2 , $param3)
+   -moz-linear-gradient($param1, $param2 , $param3)
+   -webkit-linear-gradient($param1, $param2 , $param3)
+
 @mixin horizontal_div_divider_1($param1, $param2)
    border-bottom: 100vh $param1 solid
    border-top:    0vh solid transparent 
@@ -291,13 +299,9 @@ table
     thead
         tr
             @extend .text-center
+            @include gradient_background(left,#2948ff,#396afc)
             width: 100%
             height: 50px
-            background: #396afc !important
-            background: -webkit-linear-gradient(left, #2948ff, #396afc) !important
-            background: -moz-linear-gradient(left, #2948ff, #396afc) !important
-            background: -o-linear-gradient(left, #2948ff, #396afc)
-            background: linear-gradient(to right, #2948ff, #396afc)
             td
                 padding: 1% !important
     tbody
@@ -421,7 +425,10 @@ footer
 #copyright
     background: $__COLOR__light-gray_ !important
     @extend .text-center
-    height: 50px
+    padding: 0.7%
+    p
+        text-align: center !important
+        cursor: pointer
 //++++++++++++++++++End of Footer++++++++++++++++++//
 
 //+++++++++++++++++++++Index01+++++++++++++++++++++//
@@ -431,6 +438,15 @@ footer
     background: #afc3fd
     .subIndex01
         @include responsive_system(4,4,12,12)
+        &:first-child
+            @extend .text-left
+            img
+                &:nth-child(2n-1)
+                    @include transform_rotate(-25deg)
+        &:last-child
+            @extend .text-right
+            img
+                @include transform_rotate(25deg)
         &:first-child, &:last-child
             @extend .hidden-sm
             @extend .hidden-xs
@@ -445,6 +461,11 @@ footer
                 width: 350px
                 height: 450px
                 z-index: -10 !important
+        img
+            @extend .text-center
+            width: 50%
+            margin-bottom: 20%
+            -moz-filter: opacity(0.4) !important
 //+++++++++++++++++++++End of Index01++++++++++++++//
 
 //+++++++++++++++++++++Index02+++++++++++++++++++++//
@@ -452,6 +473,7 @@ footer
     min-height: 100vh
     height: auto
     background: $__COLOR__dark-gray_
+    padding: $__PADDING-DEFAULT__
 
 //+++++++++++++++++++++End of Index02++++++++++++++//
 
