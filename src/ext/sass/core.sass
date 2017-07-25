@@ -293,12 +293,13 @@ table
             @extend .text-center
             width: 100%
             height: 50px
-            padding: 10% !important
             background: #396afc !important
             background: -webkit-linear-gradient(left, #2948ff, #396afc) !important
             background: -moz-linear-gradient(left, #2948ff, #396afc) !important
             background: -o-linear-gradient(left, #2948ff, #396afc)
             background: linear-gradient(to right, #2948ff, #396afc)
+            td
+                padding: 1% !important
     tbody
         tr
             @extend .text-center
@@ -314,7 +315,7 @@ table
             &::after
                 content: ""
                 position: absolute
-                bottom: 0px
+                bottom: -15px
                 left: 0
                 height: 1px
                 width: 100%
@@ -325,11 +326,15 @@ table
                 background: -webkit-linear-gradient(left, transparent 0%,#2948ff 50%,transparent 100%)
                 background: -ms-linear-gradient(left, transparent 0%,#2948ff 50%,transparent 100%)
             td
+                padding: 1% !important
                 p
                     @extend .white-title
                     @extend .text-center
                     &:first-letter
                         text-transform: uppercase
+                &:first-child
+                    p
+                        font-weight: bold
 //-------------------------------------------------------------------------------//
 
 
