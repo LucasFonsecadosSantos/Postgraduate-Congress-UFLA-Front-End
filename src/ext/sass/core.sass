@@ -144,15 +144,15 @@ main
 
 @mixin divider($param1, $param2)
     @extend .hidden-xs
-    min-height: 300px
-    height: 300px
-    overflow: hidden
-    margin: 0px
-    border-top: 300px solid #afc3fd
-    border-left: 50vw solid $__COLOR__dark-gray_ !important
-    border-right: 50vw solid $__COLOR__dark-gray_ !important
-    border-bottom: none
-    z-index: 10 !important
+    min-height:     200px
+    height:         200px
+    overflow:       hidden
+    margin:         0px
+    border-top:     200px solid #afc3fd
+    border-left:    50vw solid $__COLOR__dark-gray_ !important
+    border-right:   50vw solid $__COLOR__dark-gray_ !important
+    border-bottom:  none
+    z-index:        10 !important
 
 @mixin filter($param)
    filter:         $param
@@ -274,12 +274,12 @@ p
 
 .divider01
     @extend .hidden-xs
-    min-height: 300px
-    height: 300px
+    min-height: 200px
+    height: 200px
     overflow: hidden
     margin: 0px
     @include transform_translateY(-100%)
-    border-top: 300px solid transparent
+    border-top: 200px solid transparent
     border-left: 50vw solid #afc3fd !important
     border-right: 50vw solid #afc3fd !important
     border-bottom: none
@@ -451,6 +451,7 @@ footer
     min-height: auto
     height: auto
     background: #afc3fd
+    margin-top: -5%
     .subIndex01
         @include responsive_system(4,4,12,12)
         &:first-child
@@ -470,6 +471,7 @@ footer
         .fix
             @include transform_translateY(80%)
             margin-top: -80%
+            display: none
             img
                 @extend .text-center
                 @extend .img-responsive
@@ -497,9 +499,9 @@ footer
     padding: $__PADDING-DEFAULT__
     min-height: $__HEIGHT__index03_
     height: auto
-    background: #ECE9E6
-    background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6)
-    background: linear-gradient(to right, #FFFFFF, #ECE9E6)
+    background: #afc3fd //#ECE9E6
+    // background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6)
+    // background: linear-gradient(to right, #FFFFFF, #ECE9E6)
     .subIndex03
         @include responsive_system(6,6,12,12)
         &:first-child
@@ -512,9 +514,22 @@ footer
 
 //+++++++++++++++++++++Index04+++++++++++++++++++++//
 #index04
-    height: $__HEIGHT__index04_
-    min-height: auto
+    height: auto
+    min-height: $__HEIGHT__index04_
     padding: $__PADDING-DEFAULT__
+    background: $__COLOR__dark-gray_
+    .subIndex04
+        @include responsive_system(4,4,6,12)
+        padding: 5%
+        .cell
+            width: 100%
+            min-height: 300px
+            height: auto
+            background: #396afc
+            background: linear-gradient(to right, #2948ff, #396afc)
+            background: -ms-linear-gradient(to right, #2948ff, #396afc)
+            background: -moz-linear-gradient(to right, #2948ff, #396afc)
+            background: -webkit--linear-gradient(to right, #2948ff, #396afc)
 //+++++++++++++++++++++End of Index04++++++++++++++//
 
 //+++++++++++++++++++++Index05+++++++++++++++++++++//
@@ -522,9 +537,9 @@ footer
     padding: $__PADDING-DEFAULT__
     min-height: $__HEIGHT__index05_
     height: auto
-    background: #ECE9E6
-    background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6)
-    background: linear-gradient(to right, #FFFFFF, #ECE9E6)
+    background: #afc3fd //#ECE9E6
+    // background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6)
+    // background: linear-gradient(to right, #FFFFFF, #ECE9E6)
     .subIndex05
         @include responsive_system(6,6,12,12)
         &:last-child
