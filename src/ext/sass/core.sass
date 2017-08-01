@@ -144,11 +144,11 @@ main
 
 @mixin divider($param1, $param2)
     @extend .hidden-xs
-    min-height:     200px
-    height:         200px
+    min-height:     150px
+    height:         150px
     overflow:       hidden
     margin:         0px
-    border-top:     200px solid #afc3fd
+    border-top:     150px solid #afc3fd
     border-left:    50vw solid $__COLOR__dark-gray_ !important
     border-right:   50vw solid $__COLOR__dark-gray_ !important
     border-bottom:  none
@@ -202,6 +202,16 @@ h3
     color: $__COLOR__white_
     margin: 0px
 h4
+    position: relative
+    font:
+        family: $__FONT__text1_
+        weight: 400
+        size: 1.3em
+    text-transform: lowercase
+    color: $__COLOR__white_
+    margin: 0px
+    &:first-letter
+        text-transform: uppercase
 h5
 label
 a
@@ -212,7 +222,7 @@ a
     color:  inherit
     cursor: pointer
     text:
-        decoration: underline
+        decoration: none
         transform: inherit
     outline: none
 p
@@ -274,12 +284,12 @@ p
 
 .divider01
     @extend .hidden-xs
-    min-height: 200px
-    height: 200px
+    min-height: 150px
+    height: 150px
     overflow: hidden
     margin: 0px
     @include transform_translateY(-100%)
-    border-top: 200px solid transparent
+    border-top: 150px solid transparent
     border-left: 50vw solid #afc3fd !important
     border-right: 50vw solid #afc3fd !important
     border-bottom: none
@@ -427,7 +437,7 @@ header
                     @include transform_translateY(-14.5%)
                     text-align: right !important
                     font-size: 20em //!important
-                &
+
 
 //++++++++++++++++++End of header++++++++++++++++++//
 
@@ -522,14 +532,44 @@ footer
         @include responsive_system(4,4,6,12)
         padding: 5%
         .cell
+            @extend .text-center
             width: 100%
             min-height: 300px
             height: auto
+            margin-top: 60px
             background: #396afc
             background: linear-gradient(to right, #2948ff, #396afc)
             background: -ms-linear-gradient(to right, #2948ff, #396afc)
             background: -moz-linear-gradient(to right, #2948ff, #396afc)
             background: -webkit--linear-gradient(to right, #2948ff, #396afc)
+            padding: 0% 30px 0% 30px
+            .line:first-child
+                @include transform_translateY(-50%)
+            .avatar
+                @include border_radius(100%)
+                height: 200px
+                width: 200px
+                border: none
+                background:
+                    size: cover
+                    position: top
+            .socialPanelist
+                @extend .row
+                background: solid 2px #000
+                .contentAux
+                    width: 80%
+                    img
+                        @extend .transitions
+                        cursor: pointer
+                        width: 20px
+                        margin: 10px
+                        &:hover
+                            width: 15px !important
+        @for $i from 1 through $__AMOUNT__panelist_
+            .cell:nth-child(#{$i})
+                .avatar
+                    background: url("../../img_new/palestrantes/#{nth($__IMAGE__panelist_, $i)}") !important
+                    
 //+++++++++++++++++++++End of Index04++++++++++++++//
 
 //+++++++++++++++++++++Index05+++++++++++++++++++++//
@@ -571,6 +611,8 @@ footer
     h2
         font-size: 1.8em !important
     header
+        .headerContent
+            @include transform_translateY(60%)
         h1
             &[class="s0"]
                 font-size: 20em !important
@@ -587,6 +629,8 @@ footer
     h2
         font-size: 1.8em !important
     header
+        .headerContent
+            @include transform_translateY(60%)
         h1
             &[class="s0"]
                 font-size: 20em !important
@@ -603,6 +647,8 @@ footer
     h2
         font-size: 1.8em !important
     header
+        .headerContent
+            @include transform_translateY(60%)
         h1
             &[class="s0"]
                 font-size: 20em !important
@@ -638,6 +684,9 @@ footer
         h1
             &[class="s0"]
                 font-size: 14em !important
+        .navbar-brand
+            font-size: 0.8em !important
+            
     #index03
         .subIndex03
             p
@@ -646,13 +695,23 @@ footer
 
 @media screen and (max-width: 767px) and (min-width: 550px)
     h1
-        font-size: 3em !important
+        font-size: 2.5em !important
     h2
         font-size: 1.8em !important
     header
+        .headerContent
+            @include transform_translateY(150%)
+            .headerButton
+                width: 30px !important
         h1
             &[class="s0"]
-                font-size: 12em !important
+                font-size: 10em !important
+        .menu
+            .navbar-brand
+                font-size: 1.3em !important
+            .subMenu
+                &:after
+                    display: none !important
     #index03
         p
             text-align: center !important
@@ -661,13 +720,23 @@ footer
 
 @media screen and (max-width: 549px) and (min-width: 350px)
     h1
-        font-size: 2em !important
+        font-size: 1.3em !important
     h2
         font-size: 1.8em !important
     header
+        .headerContent
+            @include transform_translateY(150%)
+            .headerButton
+                width: 30px !important
         h1
             &[class="s0"]
-                font-size: 8em !important
+                font-size: 5.5em !important
+        .menu
+            .navbar-brand
+                font-size: 0.8em !important
+            .subMenu
+                &:after
+                    display: none !important
     #index03
         .subIndex03
             p
@@ -676,15 +745,25 @@ footer
 
 @media screen and (max-width: 349px)
     h1
-        font-size: 1em !important
+        font-size: 1.3em !important
     h2
         font-size: 1.2em !important
     p
         font-size: 1em !important
     header
+        .headerContent
+            @include transform_translateY(150%)
+            .headerButton
+                width: 30px !important
         h1
             &[class="s0"]
-                font-size: 4em !important
+                font-size: 5.5em !important
+        .menu
+            .navbar-brand
+                font-size: 0.8em !important
+            .subMenu
+                &:after
+                    display: none !important
     #index03
         .subIndex03
             p
