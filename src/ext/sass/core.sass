@@ -314,8 +314,42 @@ p
 
 
 //-----------------------------------[ FORMS ]-----------------------------------//
-input, textarea
+input, textarea, select
+    @include border-radius(8px)
+    height: 80px
+    margin-bottom: 20px
+    background: transparent
+    //outline: solid 2px $__COLOR__dark-blue_
+    outline: none
+    cursor: pointer
+    padding: 3%
+    border: solid 2px $__COLOR__light-gray_
+    font:
+        size: 1.5em
+        family: $__FONT__text1_
+        weight: 300
+    color: $__COLOR__white_
+    &[type="name"]
+        &:first-letter
+            text-transform: uppercase !important
+    &[type="email"]
+        &:first-letter
+            text-transform: lowercase !important
+    
+
 button
+    @include border-radius(10px)
+    outline: none
+    cursor: pointer
+    padding: 1%
+
+    font:
+        size: 1.5em
+        family: $__FONT__text1_
+        weight: 300
+    color: $__COLOR__white_
+
+
 table
     @include responsive_system(12,12,12,12)
     @extend .hidden-sm
@@ -591,6 +625,19 @@ footer
             img
                 @extend .img-responsive
                 width: 70%
+//+++++++++++++++++++++End of Index05++++++++++++++//
+
+//+++++++++++++++++++++Index05+++++++++++++++++++++//
+#index06
+    @extend .text-center
+    padding: $__PADDING-DEFAULT__
+    height: auto
+    min-height: $__HEIGHT__index06_
+    background: $__COLOR__dark-gray_
+    .subIndex06
+        @include responsive_system(6,6,6,6)
+    input, textarea, select
+        width: 100% !important
 //+++++++++++++++++++++End of Index05++++++++++++++//
 
 //-------------------------------------------------------------------------------//
