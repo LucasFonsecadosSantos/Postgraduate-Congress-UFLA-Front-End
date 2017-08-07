@@ -342,7 +342,8 @@ button
     outline: none
     cursor: pointer
     padding: 1%
-
+    background: $__COLOR__light-gray_
+    border: none
     font:
         size: 1.5em
         family: $__FONT__text1_
@@ -414,9 +415,14 @@ header
     height: auto
     // background-image: url('http://www.ufla.br/ascom/wp-content/uploads/2011/08/Reitoria_arerea_montagem1.jpg'), linear-gradient(to right, #2948ff, #396afc)
     // background-size: cover
-    background: #396afc
-    background: -webkit-linear-gradient(to right, #2948ff, #396afc), url('http://www.ufla.br/ascom/wp-content/uploads/2011/08/Reitoria_arerea_montagem1.jpg')
-    background: linear-gradient(to right, #2948ff, #396afc), url('http://www.ufla.br/ascom/wp-content/uploads/2011/08/Reitoria_arerea_montagem1.jpg')
+    // background: #396afc
+    // background: -webkit-linear-gradient(to right, #2948ff, #396afc), url('http://www.ufla.br/ascom/wp-content/uploads/2011/08/Reitoria_arerea_montagem1.jpg')
+    // background: linear-gradient(to right, #2948ff, #396afc), url('http://www.ufla.br/ascom/wp-content/uploads/2011/08/Reitoria_arerea_montagem1.jpg')
+    background: 
+        size: cover
+        image: url(../../img_new/index/back.png)
+        position: top
+
     .menu
         @include border_radius(0px)
         background: none
@@ -635,7 +641,7 @@ footer
     min-height: $__HEIGHT__index06_
     background: $__COLOR__dark-gray_
     .subIndex06
-        @include responsive_system(6,6,6,6)
+        @include responsive_system(6,6,12,12)
     input, textarea, select
         width: 100% !important
 //+++++++++++++++++++++End of Index05++++++++++++++//
