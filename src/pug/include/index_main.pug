@@ -11,8 +11,30 @@ section#index01
                     h2 
                         | já conhece o congresso da pós graduação?
             div.line
-                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                p   
+                    | À partir desse ano, o Congresso de Pós-Graduação da UFLA passa a ser de
+                    | responsabilidade integral da Pró-Reitoria de Pós-Graduação (PRPG), com o 
+                    | apoio da coordenação e secretaria dos 35 Programas de Pós-Graduação e da
+                    | Associação da Pós-Graduação da UFLA (APG).
+                p 
+                    | O 26º Congresso de Pós-Graduação da UFLA terá como tema principal a
+                    | “Inovação Tecnológica na Universidade”. Nesse sentido, a PRPG não
+                    | mediu esforços para convidar sete palestrantes externos a UFLA e 
+                    | ainda nove docentes do quadro permanente para expor assuntos relacionados
+                    | a melhoria da qualidade da produção científica, a escolha correta e formas
+                    | de divulgação dos resultados de pesquisas, temas inerentes ao mestrado 
+                    | profissional, além da presença de dois diretores da CAPES, que apresentarão
+                    | as ações atuais sobre recursos, bolsas e financiamento a internacionalização
+                    | na pós-graduação. Frente a essa ação da PRPG o evento é gratuito e os discentes
+                    | da pós-graduação, técnicos, docentes e até mesmos os estudantes de graduação 
+                    | que desenvolvem projetos de iniciação científica e que possuem como meta 
+                    | ingressar na pós-graduação, poderão participar de todas as palestras, pois 
+                    | todas serão transmitidas em tempo real em anfiteatros da UFLA.
+                    | Os participantes poderão ainda submeter um resumo científico, que será 
+                    | apresentado na modalidade oral. 
+                    | É um momento ímpar para discutirmos assuntos relacionados a pós-graduação, 
+                    | onde estamos e onde pretendemos chegar. Contamos com a presença de toda a 
+                    | comunidade acadêmica da UFLA.
             div.line.fix
                 img(src="#")
         div.subIndex01
@@ -101,7 +123,7 @@ section#index02
 section#index05
     div.content
         div.subIndex05
-            img(src="img_new/index/01.svg")
+            iframe(src="https://www.youtube.com/embed/uTq8jHnY3Lo",frameborder="0",dennyfullscreen)
         div.subIndex05
             div.titleSection
                 h2 
@@ -205,14 +227,12 @@ section#index06
         form(action="subscribeSubmit.php", method="post" onSubmit="return checkFields()")
             div.line
                 div.subIndex06
-                    input(type="name", name="nome", id="nome" ,placeholder="Qual é o seu nome?", title="Insira seu nome aqui.", alt="Campo para inserir seu nome.")
+                    input(type="name", name="nome", id="nome" ,placeholder="Qual é o seu nome?", title="Insira seu nome aqui.", alt="Campo para inserir seu nome.")                    
+                    //Vinculado Iniciacao Cientifica, value=0
+                    input(name="bic_jr", id="bic_jr", placeholder="", title="", alt="", type="hidden", value="1")
                 div.subIndex06
-                    select(name="bic_jr", id="bic_jr", placeholder="", title="", alt="")
-                        option(value="2") teste91
-                        option(value="0") teste91
-                        option(value="1") teste91
-                        option(value="3") teste91
-            div.row-fluid
+                    input(type="text",name="cpf",id="cpf",size=11 ,maxlength="11", placeholder="Digite seu cpf", title="Digite seu cpf", alt="Campo para inserir seu cpf.")
+            div.line.content.fix                 
                 input(type="email", name="email", id="email",placeholder="Qual é o seu email?", title="Insira seu email aqui.", alt="Campo para inserir seu email.")
             div.line
                 div.subIndex06
@@ -221,27 +241,24 @@ section#index06
                     input(type="password", name="senha2" ,id="senha2",placeholder="Confirme sua senha", title="Confirme sua senha", alt="Campo para confirmar sua senha.")
             div.line
                 div.subIndex06
-                    input(type="text",disabled ,name="mat" ,id="mat", placeholder="Digite sua matricula", title="Digite sua matricula", alt="Campo para inserir sua matricula.")
-                div.subIndex06
-                    input(type="text",name="cpf",id="cpf",size=11 ,maxlength="11", placeholder="Digite seu cpf", title="Digite seu cpf", alt="Campo para inserir seu cpf.")
-            div.line
-                div.subIndex06
                     input(type="text", name="ddd", id="ddd", maxlength=2, style="text-align:center !important;margin-right: 5% !important;width:15% !important", placeholder="DDD")
                     input(type="text", name="tel", id="tel", style="width:80% !important", placeholder="Qual é seu telefone?")
                 div.subIndex06
-                    input.inst#inst1(disabled, type="radio", name="inst", value="1") UFLA
-				    input.inst#inst2(disabled, type="radio", name="inst", value="2")
-                    select#escola(disabled,name="escola")
-                        option(value="2",selected)-- Selecionar --
-                        option(value="E.E. Azarias Ribeiro") E.E. Azarias Ribeiro
-                        option(value="E.E. Cinira Carvalho") E.E. Cinira Carvalho
-                        option(value="E.E. Cristiano de Souza") E.E. Cristiano de Souza
-                        option(value="E.E. Dora Matarazzo") E.E. Dora Matarazzo
-                        option(value="E.E. Firmino Costa") E.E. Firmino Costa
-                        option(value="E.E. João Batista Hermeto") E.E. João Batista Hermeto
-                        option(value="Colégio Tiradentes"> Colégio Tiradentes
+                    input(type="text",name="mat" ,id="mat", placeholder="Digite sua matricula", title="Digite sua matricula", alt="Campo para inserir sua matricula.")
+                    input#inst1.inst(name="inst", value="1", type="hidden")
             div.line
                 button(type="submit") cadastrar
+                button(type="reset") limpar
+                input(type="hidden",name="eid",value="10")
+
+section#index07
+    div.content
+        div.titleSection
+            h2
+                | localização
+        div.line
+            div.subIndex07
+            
 //- <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 //- <html xmlns="http://www.w3.org/1999/xhtml">
 //- <head>

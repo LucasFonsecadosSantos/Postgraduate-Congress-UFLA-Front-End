@@ -69,7 +69,7 @@ body
    overflow-x: hidden
    
 main
-   background: #afc3fd
+   background: #f3f3f3//#afc3fd
 
 
 
@@ -148,7 +148,7 @@ main
     height:         150px
     overflow:       hidden
     margin:         0px
-    border-top:     150px solid #afc3fd
+    border-top:     150px solid #f3f3f3
     border-left:    50vw solid $__COLOR__dark-gray_ !important
     border-right:   50vw solid $__COLOR__dark-gray_ !important
     border-bottom:  none
@@ -290,12 +290,12 @@ p
     margin: 0px
     @include transform_translateY(-100%)
     border-top: 150px solid transparent
-    border-left: 50vw solid #afc3fd !important
-    border-right: 50vw solid #afc3fd !important
+    border-left: 50vw solid #f3f3f3 !important
+    border-right: 50vw solid #f3f3f3 !important
     border-bottom: none
 
 .divider02
-    @include divider(#afc3fd, $__COLOR__dark-gray_)
+    @include divider(#f3f3f3, $__COLOR__dark-gray_)
 
 .white-title
     color: $__COLOR__white_ !important
@@ -315,7 +315,7 @@ p
 
 //-----------------------------------[ FORMS ]-----------------------------------//
 input, textarea, select
-    @include border-radius(8px)
+    @include border-radius(6px)
     height: 80px
     margin-bottom: 20px
     background: transparent
@@ -342,6 +342,7 @@ button
     outline: none
     cursor: pointer
     padding: 1%
+    margin: 5px
     background: $__COLOR__light-gray_
     border: none
     font:
@@ -486,6 +487,50 @@ footer
     min-height: $__HEIGHT__footer_
     height: auto
     background: $__COLOR__dark-gray_
+    padding: $__PADDING-DEFAULT__
+    .titleSection
+        margin-bottom: 0px
+    form
+        margin-top: 35px
+        input,textarea
+            width: 80%
+            margin: 5px !important
+            height: 40px
+        textarea
+            height: 180px
+    .subFooter
+        &:first-child
+            @include responsive_system(4,4,12,12)
+        &:last-child
+            @include responsive_system(8,8,12,12)
+            @extend .text-center
+    
+    //FOOTER FIRST LINE//
+    .line:last-child
+        margin-top: 30px
+        
+        //CONTACT INFORMATIONS AREA//
+        .subFooter:first-child
+            padding: 0px !important
+            p
+                text-align: left !important
+        
+        //SPONSORSHIP LOGO IMAGES AREA//
+        .subFooter:last-child
+            text-align: right
+            .imgCell
+                padding-top: 20px
+                @include responsive_system(3,3,6,12)
+                //SPONSORSHIP IMAGES//
+                img
+                    @extend .img-responsive
+                    width: 95%
+                    height: 80px
+                    background: #000
+                    border: none !important
+                    cursor: pointer
+    p
+        color: rgba(255,255,255,0.5)
 
 #copyright
     background: $__COLOR__light-gray_ !important
@@ -500,7 +545,7 @@ footer
 #index01 //#afc3fd
     min-height: auto
     height: auto
-    background: #afc3fd
+    background: #f3f3f3//#afc3fd
     margin-top: -5%
     .subIndex01
         @include responsive_system(4,4,12,12)
@@ -549,7 +594,7 @@ footer
     padding: $__PADDING-DEFAULT__
     min-height: $__HEIGHT__index03_
     height: auto
-    background: #afc3fd //#ECE9E6
+    background: #f3f3f3//#afc3fd //#ECE9E6
     // background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6)
     // background: linear-gradient(to right, #FFFFFF, #ECE9E6)
     .subIndex03
@@ -617,13 +662,17 @@ footer
     padding: $__PADDING-DEFAULT__
     min-height: $__HEIGHT__index05_
     height: auto
-    background: #afc3fd //#ECE9E6
-    // background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6)
-    // background: linear-gradient(to right, #FFFFFF, #ECE9E6)
+    background: #f3f3f3
     .subIndex05
         @include responsive_system(6,6,12,12)
+        iframe
+            width: 100%
+            height: 300px
         &:last-child
+            padding-left: 50px
+            @extend .text-center
             p
+                text-align: justify
                 &:first-letter
                     text-transform: uppercase !important
         &:first-child
@@ -642,8 +691,29 @@ footer
     background: $__COLOR__dark-gray_
     .subIndex06
         @include responsive_system(6,6,12,12)
+        padding: 0px 8px 0px 8px !important
     input, textarea, select
         width: 100% !important
+    form
+        .fix
+            padding: 0px !important
+            @extend .text-center
+            input[name="email"]
+                width: 98.5% !important
+                float: left
+                margin-left: 0.7%
+//+++++++++++++++++++++End of Index05++++++++++++++//
+
+
+//+++++++++++++++++++++Index07+++++++++++++++++++++//
+#index07
+    @extend .text-center
+    padding: $__PADDING-DEFAULT__
+    height: auto
+    .subIndex07
+        height: 400px
+        width: 100%
+        background: #1800cc
 //+++++++++++++++++++++End of Index05++++++++++++++//
 
 //-------------------------------------------------------------------------------//
@@ -654,9 +724,9 @@ footer
 //----------------------------------[ RESPONSIVE COND. ]-------------------------//
 @media screen and (min-width: 1921px)
     h1
-        font-size: 2em !important
+        font-size: 10em !important
     h2
-        font-size: 1.8em !important
+        font-size: 14em !important
 
 @media screen and (max-width: 1750px) and (min-width: 1550px)
     h1
@@ -711,6 +781,12 @@ footer
         .subIndex03
             p
                 text-align: left !important
+    footer
+        padding: 5% !important
+        .imgCell
+            img
+                width: 80% !important
+                height: 70px !important
 
 @media screen and (max-width: 1199px) and (min-width: 992px)
     h1
@@ -727,6 +803,15 @@ footer
         .subIndex03
             p
                 text-align: left !important
+    input, textarea, select
+        height: 60px !important
+        font-size: 1.2em !important
+    footer
+        padding: 5% !important
+        .imgCell
+            img
+                width: 80% !important
+                height: 70px !important
 
 @media screen and (max-width: 991px) and (min-width: 768px)
     h1
@@ -739,12 +824,35 @@ footer
                 font-size: 14em !important
         .navbar-brand
             font-size: 0.8em !important
-            
     #index03
         .subIndex03
             p
                 text-align: center !important
             padding: 3% 7% 3% 7%
+    input, textarea, select
+        height: 50px !important
+        font-size: 1.2em !important
+    footer
+        padding: 10px !important
+        textarea
+            height: 200px !important
+        .imgCell
+            img
+                width: 80% !important
+                height: 140px !important
+        .line:first-child
+            .subFooter:first-child
+                margin-top: 30px
+                p
+                    padding: 15px !important
+                    text-align: center
+        .line:last-child
+            padding-bottom: 40px !important
+            .subFooter:first-child
+                p
+                    text-align: center !important
+            .subFooter:last-child
+                text-align: center !important
 
 @media screen and (max-width: 767px) and (min-width: 550px)
     h1
@@ -770,6 +878,31 @@ footer
             text-align: center !important
         .subIndex03
             padding: 3% 7% 3% 7%
+    input, textarea, select
+        height: 60px !important
+        font-size: 1.2em !important
+    footer
+        padding: 10px !important
+        textarea
+            height: 200px !important
+        .imgCell
+            img
+                width: 80% !important
+                height: 140px !important
+        .line:first-child
+            .subFooter:first-child
+                margin-top: 30px
+                p
+                    padding: 15px !important
+                    text-align: center
+        .line:last-child
+            padding-bottom: 40px !important
+            .subFooter:first-child
+                p
+                    text-align: center !important
+            .subFooter:last-child
+                text-align: center !important
+
 
 @media screen and (max-width: 549px) and (min-width: 350px)
     h1
@@ -795,6 +928,31 @@ footer
             p
                 text-align: center !important
             padding: 3% 7% 3% 7%
+    input, textarea, select
+        height: 40px !important
+        font-size: 1em !important
+    footer
+        padding: 10px !important
+        textarea
+            height: 200px !important
+        .imgCell
+            img
+                width: 80% !important
+                height: 140px !important
+        .line:first-child
+            .subFooter:first-child
+                margin-top: 30px
+                p
+                    padding: 15px !important
+                    text-align: center
+        .line:last-child
+            padding-bottom: 40px !important
+            .subFooter:first-child
+                p
+                    text-align: center !important
+            .subFooter:last-child
+                text-align: center !important
+
 
 @media screen and (max-width: 349px)
     h1
@@ -822,4 +980,29 @@ footer
             p
                 text-align: center !important
             padding: 3% 7% 3% 7%
+    input, textarea, select
+        height: 40px !important
+        font-size: 1em !important
+    footer
+        padding: 10px !important
+        textarea
+            height: 200px !important
+        .imgCell
+            img
+                width: 80% !important
+                height: 140px !important
+        .line:first-child
+            .subFooter:first-child
+                margin-top: 30px
+                p
+                    padding: 15px !important
+                    text-align: center
+        .line:last-child
+            padding-bottom: 40px !important
+            .subFooter:first-child
+                p
+                    text-align: center !important
+            .subFooter:last-child
+                text-align: center !important
+
 //-------------------------------------------------------------------------------//
