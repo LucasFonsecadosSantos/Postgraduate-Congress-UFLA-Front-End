@@ -330,12 +330,13 @@ section#index06
         div.titleSection
             h2.white-title
                 | inscreva-se
-        form(action="subscribeSubmit.php", method="post" onSubmit="return checkFields()")
+        form(action="subscribeSubmit.php", method="post", onSubmit="return checkFields()")
             div.line
                 div.subIndex06
                     input(type="name", name="nome", id="nome" ,placeholder="Qual é o seu nome?", title="Insira seu nome aqui.", alt="Campo para inserir seu nome.")                    
                     //Vinculado Iniciacao Cientifica, value=0
-                    input(name="bic_jr", id="bic_jr", placeholder="", title="", alt="", type="hidden", value="0")
+                    select(name="bic_jr", id="bic_jr", placeholder="", title="", alt="", type="hidden", value="0",style=" display: hidden !important")
+                        option(type="hidden", value="0", selected, style="display: hidden !important")
                 div.subIndex06
                     input(type="text",name="cpf",id="cpf",size=11 ,maxlength="11", placeholder="Digite seu cpf", title="Digite seu cpf", alt="Campo para inserir seu cpf.")
             div.line.content.fix                 
@@ -351,11 +352,76 @@ section#index06
                     input(type="text", name="tel", id="tel", style="width:80% !important", placeholder="Qual é seu telefone?")
                 div.subIndex06
                     input(type="text",name="mat" ,id="mat", placeholder="Digite sua matricula", title="Digite sua matricula", alt="Campo para inserir sua matricula.")
-                    input#inst1.inst(name="inst", value="1", type="hidden")
+                    input#inst1.inst(name="inst", value="1", type="hidden", checked)
+            div.line
+                select(name="curso",id="curso")
+                    option(value="0", id="cur0", selected) -- Selecione um Curso --
+                    option(id="cur75", value='75') Doutorado em Administração (PPGA)
+                    option(id="cur77", value='77') Doutorado em Agroquímica (PPGAQ)
+                    option(id="cur79", value='79') Doutorado em Biotecnologia Vegetal (PPGBV)
+                    option(id="cur81", value='81') Doutorado em Botânica Aplicada (PPGBOT)
+                    //TA AQUI
+                    option(id="cur83", value='83') Doutorado em Ciência do Solo (PPGCS)
+                    option(id="cur86", value='86') Doutorado em Ciência dos Alimentos (PPGCA)
+                    option(id="cur88", value='88') Doutorado em Ciência e Tecnologia da Madeira (PPGCTM)
+                    option(id="cur91", value='91') Doutorado em Ciências Veterinárias (PPGCV))
+                    option(id="cur93", value='93') Doutorado em Ecologia Aplicada ( PPGECO))
+                    option(id="cur95", value='95') Doutorado em Engenharia Agrícola (PPGEA))
+                    option(id="cur98", value='98') Doutorado em Engenharia de Biomateriais (PPGBIOMAT))
+                    option(id="cur100", value='100') Doutorado em Engenharia Florestal (PPGEF))
+                    //TA AQUI
+                    option(id="cur102", value='102') Doutorado em Entomologia (PPGEN))
+                    option(id="cur104", value='104') Doutorado em Estatística e Experimentação Agropecuária (PPGEE))
+                    option(id="cur107", value='107') Doutorado em Fisiologia Vegetal (PPGFV))
+                    option(id="cur109", value='109') Doutorado em Fitopatologia (PPGFP))
+                    option(id="cur111", value='111') Doutorado em Fitotecnia (PPGFT))
+                    option(id="cur113", value='113') Doutorado em Genética e Melhoramento de Plantas  (PPGGM))
+                    option(id="cur115", value='115') Doutorado em Microbiologia Agrícola (PPGMA))
+                    option(id="cur120", value='120') Doutorado em Plantas Medicinais, Aromáticas e Condimentares  (PPGPMAC))
+                    option(id="cur122", value='122') Doutorado em Recursos Hídricos em Sistemas Agrícolas (PPGRHSA))
+                    option(id="cur124", value='124') Doutorado em Zootecnia (PPGZ))
+                    option(id="cur117", value='117') Doutorado Multicêntrico em Química de Minas Gerais  (PPGMQ-MG))
+                    option(id="cur74" ,value='74') Mestrado em Administração (PPGA))
+                    option(id="cur76", value='76') Mestrado em Agroquímica (PPGAQ))
+                    option(id="cur78", value='78') Mestrado em Biotecnologia Vegetal (PPGBV))
+                    option(id="cur80", value='80') Mestrado em Botânica Aplicada (PPGBOT))
+                    option(id="cur73", value='73') Mestrado em Ciência da Computação (PPGCC))
+                    option(id="cur82", value='82') Mestrado em Ciência do Solo (PPGCS))
+                    option(id="cur84", value='84') Mestrado em Ciência dos Alimentos (PPGCA))
+                    option(id="cur85", value='85') Mestrado em Ciência dos Alimentos (PPGCA))
+                    option(id="cur87", value='87') Mestrado em Ciência e Tecnologia da Madeira (PPGCTM))
+                    option(id="cur89", value='89') Mestrado em Ciências da Saúde ( PPGSA))
+                    option(id="cur90", value='90') Mestrado em Ciências Veterinárias (PPGCV))
+                    option(id="cur92", value='92') Mestrado em Ecologia Aplicada ( PPGECO))
+                    option(id="cur94", value='94') Mestrado em Engenharia Agrícola (PPGEA))
+                    option(id="cur97", value='97') Mestrado em Engenharia de Biomateriais (PPGBIOMAT))
+                    option(id="cur96", value='96') Mestrado em Engenharia de Sistemas e Automação (PPGESISA))
+                    option(id="cur99", value='99') Mestrado em Engenharia Florestal (PPGEF))
+                    option(id="cur101", value='101') Mestrado em Entomologia (PPGEN))
+                    option(id="cur103", value='103') Mestrado em Estatística e Experimentação Agropecuária (PPGEE))
+                    option(id="cur105", value='105') Mestrado em Física (PPGFI))
+                    option(id="cur106", value='106') Mestrado em Fisiologia Vegetal (PPGFV))
+                    option(id="cur108", value='108') Mestrado em Fitopatologia (PPGFP))
+                    option(id="cur110", value='110') Mestrado em Fitotecnia (PPGFT))
+                    option(id="cur112", value='112') Mestrado em Genética e Melhoramento de Plantas  (PPGGM))
+                    option(id="cur114", value='114') Mestrado em Microbiologia Agrícola (PPGMA))
+                    option(id="cur118", value='118') Mestrado em Nutrição e Saúde (PPGNS))
+                    option(id="cur119", value='119') Mestrado em Plantas Medicinais, Aromáticas e Condimentares  (PPGPMAC))
+                    option(id="cur121", value='121') Mestrado em Recursos Hídricos em Sistemas Agrícolas (PPGRHSA))
+                    option(id="cur123", value='123') Mestrado em Zootecnia (PPGZ))
+                    option(id="cur116", value='116') Mestrado Multicêntrico em Química de Minas Gerais  (PPGMQ-MG))
+                    option(id="cur130", value='130') Mestrado Nacional Profissional em Ensino de Física (MNPEF))
+                    option(id="cur125", value='125') Mestrado Profissional em Administração Pública (PPGAP))
+                    option(id="cur126", value='126') Mestrado Profissional em Desenvolvimento Sustentável e Extensão (PPGDE))
+                    option(id="cur127", value='127') Mestrado Profissional em Educação (PPGE))
+                    option(id="cur128", value='128') Mestrado Profissional em Genética e Melhoramento de Plantas (PPGPGM))
+                    option(id="cur129", value='129') Mestrado Profissional em Matemática em Rede Nacional  (PROFMAT))
+                    option(id="cur131", value='131') Mestrado Profissional em Tecnologias e Inovações Ambientais (PPGTIA))
             div.line
                 button(type="submit") cadastrar
                 button(type="reset") limpar
-                input(type="hidden",name="eid",value="10")
+                //lixo
+                input(type="hidden",name="eid",value="1")
 
 section#index07
     div.content
@@ -366,148 +432,3 @@ section#index07
             div.subIndex07
                 iframe(src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3719.0920332291585!2d-44.979717784464455!3d-21.22819878546701!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sufla!5e0!3m2!1spt-BR!2sbr!4v1503026719636",frameborder="0",style="border:0",dennyfullscreen)
             
-//- <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-//- <html xmlns="http://www.w3.org/1999/xhtml">
-//- <head>
-//- 	<meta name="author" content="Renato R. R. de Oliveira e Vitor A. R. Andrade">
-//- 	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-//- 	<link rel='stylesheet' type='text/css' href='css/default.css' />
-//- 	<title>CIUFLA - Inscrever-se</title>
-//- 	<script src="js/jquery-2.0.3.min.js" type="text/javascript"></script>
-//- 	<script src="js/subscribe.js" type="text/javascript"></script>
-//- </head>
-//- <body>
-//- <div id="centraliza">
-//- <div id="topo" style="background: url(img/topo.jpg);">
-//- </div><div id="menu">
-
-//- <a id="mn5" class="menu" href="http://ufla.br/congressos/">In&iacute;cio</a>
-//- &nbsp;&bull;&nbsp;
-//- <a id="mn1" class="menu" href="./">CIUFLA</a>
-//- &nbsp;&bull;&nbsp;
-//- <a id="mn2" class="menu" href="loginadmin.php">Administrador</a>
-//- &nbsp;&bull;&nbsp;
-//- <a id="mn4" class="menu" href="library.php">Biblioteca Digital</a>
-//- &nbsp;&bull;&nbsp;
-//- <a id="mn6" class="menu" href="ciuflasigCertificados.php">Certificados</a>
-
-//- </div><div id="conteudo">
-//-     <center><h1>Ficha de Inscri&ccedil;&atilde;o</h1>
-//-     Todos os campos s&atilde;o obrigat&oacute;rios.<br />
-//-     O e-mail deve ser v&aacute;lido pois ser&atilde;o enviadas
-//- 		informa&ccedil;&otilde;es para o mesmo.<br />
-//-     Favor utilizar preferencialmente o e-mail institucional.<br /><br />
-//-     <form action="subscribeSubmit.php" method="post"
-//- 		onSubmit="return checkFields()">
-//-     <table border=0>
-//-     <tr>
-//- 		<td>Nome Completo:</td>
-//- 		<td><input type="text" name="nome" id="nome" size=40 /></td>
-//-     </tr>
-//-      <tr>
-//- 		<td>Você está vinculado a qual programa:</td>
-//- 		<td><select name="bic_jr" id="bic_jr">
-//- 				<option value="2" selected>-- Selecionar --</option>
-//- 				<option value="0">Iniciação Científica</option>
-//- 				<option value="1">Bic Júnior</option>
-//- 				<option value="3">Iniciação à Docência</option>
-//- 			</select></td>
-//-     </tr>
-//-     <tr>
-//- 		<td>E-mail:</td>
-//- 		<td><input type="text" name="email" id="email" size=30 />
-//- 		<br><font color='red'>(Obrigatório e-mail institucional. Ex.: exemplo@computacao.ufla.br)</color></td>
-//-     </tr>
-//-     <tr>
-//- 		<td>Senha de Acesso:</td>
-//- 		<td><input type="password" name="senha" id="senha" size=25 /></td>
-//-     </tr>
-//-     <tr>
-//- 		<td>Confirmar Senha:</td>
-//- 		<td><input type="password" name="senha2" id="senha2" size=25 /></td>
-//-     </tr>
-   
-//-     <tr>
-//- 		<td>Matr&iacute;cula:</td>
-//- 		<td><input disabled type="text" name="mat" id="mat" size=30 /><br />
-//- 		(Campo não requisitado para Bic Jr)</td>
-//-     </tr>
-//- 	<tr>
-//- 		<td>CPF:</td>
-//- 		<td><input type="text" name="cpf" id="cpf" size=11  maxlength="11" /><br/>
-//- 		(Somente Números)
-//- 		</td>
-//-     </tr>
-//-     <tr>
-//- 		<td>Telefone:</td>
-//- 		<td>( <input type="text" name="ddd" id="ddd" size=2
-//- 			maxlength=2 /> )
-//- 		<input type="text" name="tel" id="tel" size=10 /></td>
-//-     </tr>
-//-     <tr><td></>Institui&ccedil;&atilde;o:</td><td><table><tr><td>
-//- 				<input disabled type="radio" name="inst" value="1"  class="inst" id="inst1" /> UFLA</td><td>
-//- 				<input disabled type="radio" name="inst" value="2" class="inst"	id="inst2" /> Escola(Bic Jr):<select disabled name="escola" id="escola">
-//- 				<option value="2" selected>-- Selecionar --</option>
-//- 				<option value="E.E. Azarias Ribeiro">E.E. Azarias Ribeiro</option>
-//- 				<option value="E.E. Cinira Carvalho">E.E. Cinira Carvalho</option>
-//- 				<option value="E.E. Cristiano de Souza">E.E. Cristiano de Souza</option>
-//- 				<option value="E.E. Dora Matarazzo">E.E. Dora Matarazzo</option>
-//- 				<option value="E.E. Firmino Costa">E.E. Firmino Costa</option>
-//- 				<option value="E.E. João Batista Hermeto">E.E. João Batista Hermeto</option>
-//- 				<option value="Colégio Tiradentes">Colégio Tiradentes</option>
-//- 			</select></td><td>
-//- 				<input disabled type="radio" name="inst" value="3" class="inst" 	id="inst3" /> Outras: <input disabled type="text" name="outrasInsts" id="outrasInsts" size=15></td></tr>
-//-     </tr>
-//-     </table>
-//-     <tr>
-//- 		<td>Curso/Área:</td>
-//- 		<td><select disabled name="curso" id="curso">
-//- 		<option value="0" id="cur0" selected>-- Selecione um Curso --</option>
-//- 		<option id="cur70" value='70'>Inic. Científica - ABI - Engenharias (ICEABI)</option>
-//- <option id="cur7" value='7'>Inic. Científica - Administração (ICAdm)</option>
-//- <option id="cur8" value='8'>Inic. Científica - Administração Pública (ICAdmPub)</option>
-//- <option id="cur9" value='9'>Inic. Científica - Agronomia (ICAgr)</option>
-//- <option id="cur12" value='12'>Inic. Científica - Agronomia - Ciência do Solo (ICAgrCS)</option>
-//- <option id="cur10" value='10'>Inic. Científica - Agronomia - Entomologia (ICAgrEnto)</option>
-//- <option id="cur11" value='11'>Inic. Científica - Agronomia - Fitopatologia (ICAgrFito)</option>
-//- <option id="cur32" value='32'>Inic. Científica - Ciência da Computação / Sistemas de Informação (ICCCSI)</option>
-//- <option id="cur13" value='13'>Inic. Científica - Ciências Biológicas (ICCBio)</option>
-//- <option id="cur31" value='31'>Inic. Científica - Direito (ICDir)</option>
-//- <option id="cur30" value='30'>Inic. Científica - Educação (ICEduc)</option>
-//- <option id="cur27" value='27'>Inic. Científica - Educação Física (ICEdFis)</option>
-//- <option id="cur15" value='15'>Inic. Científica - Engenharia Agrícola (ICEAgr)</option>
-//- <option id="cur16" value='16'>Inic. Científica - Engenharia Ambiental (ICEAmb)</option>
-//- <option id="cur17" value='17'>Inic. Científica - Engenharia de Alimentos (ICEAlim)</option>
-//- <option id="cur18" value='18'>Inic. Científica - Engenharia de Controle e Automação  (ICECA)</option>
-//- <option id="cur19" value='19'>Inic. Científica - Engenharia Florestal (ICEICFlor)</option>
-//- <option id="cur20" value='20'>Inic. Científica - Filosofia (ICFilo)</option>
-//- <option id="cur28" value='28'>Inic. Científica - Física (ICFis)</option>
-//- <option id="cur21" value='21'>Inic. Científica - Letras (ICLet)</option>
-//- <option id="cur23" value='23'>Inic. Científica - Matemática (ICMat)</option>
-//- <option id="cur71" value='71'>Inic. Científica - Medicina (ICMed)</option>
-//- <option id="cur22" value='22'>Inic. Científica - Medicina Veterinária (ICMedVet)</option>
-//- <option id="cur24" value='24'>Inic. Científica - Nutrição (ICNut)</option>
-//- <option id="cur72" value='72'>Inic. Científica - Pedagogia (ICPed)</option>
-//- <option id="cur25" value='25'>Inic. Científica - Química (ICQuim)</option>
-//- <option id="cur29" value='29'>Inic. Científica - Zootecnia (ICZoo)</option>
-//- 		</select>(Campo não requisitado para Bic Jr)</td>
-//-     </tr>
-    
-    
-//-     </table><br />
-//-     <input type="submit" value="Inscrever" />
-//-     <input type="reset" value="Limpar Campos" />
-//-     <input type="hidden" name="eid" value="10" />
-//-     </form>
-//- 	</center><br /><br />
-//- </div>
-
-//- <div id="rodape">
-//- 	Pr&oacute;-Reitoria de Pesquisa -
-//- 	<a href="http://www.prp.ufla.br/" target="_blank">www.prp.ufla.br</a> -
-//- 	E-mail: prp@prp.ufla.br<br />
-//- 	Desenvolvido por: Renato Oliveira, Vitor Andrade, Heitor Parreiras e Tiago Paraizo<br />
-//- </div>
-//- </div>
-//- </body>
-//- </html>            
