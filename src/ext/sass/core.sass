@@ -632,7 +632,7 @@ footer
     .subIndex04
         @include responsive_system(4,4,6,12)
         .cell
-            margin-top: 100px
+            margin-top: 200px
             @extend .text-center
             width: 80%
             height: 250px
@@ -662,6 +662,24 @@ footer
                 background: url(../../img_new/palestrantes/05.jpg)
             .avatar-palestrante-09
                 background: url(../../img_new/palestrantes/05.jpg)
+            .avatar-palestrante-10
+                background: url(../../img_new/palestrantes/05.jpg)
+            .avatar-palestrante-11
+                background: url(../../img_new/palestrantes/05.jpg)
+            .avatar-palestrante-12
+                background: url(../../img_new/palestrantes/05.jpg)
+            .avatar-palestrante-13
+                background: url(../../img_new/palestrantes/05.jpg)
+            .avatar-palestrante-14
+                background: url(../../img_new/palestrantes/05.jpg)
+            .avatar-palestrante-15
+                background: url(../../img_new/palestrantes/05.jpg)
+            .avatar-palestrante-16
+                background: url(../../img_new/palestrantes/05.jpg)
+            .avatar-palestrante-17
+                background: url(../../img_new/palestrantes/05.jpg)
+            .avatar-palestrante-18
+                background: url(../../img_new/palestrantes/05.jpg)
 
             .avatar
                 @include border_radius(100%)
@@ -672,8 +690,14 @@ footer
                 background:
                     size: cover
                     position: top
-            .line
-                @include transform_translateY(-150%)
+            .cellContent
+                @extend .line
+                @include transform_translateY(-90%)
+                overflow: hidden
+                h4
+                    max-height: 41px
+                    min-height: 41px
+                    overflow: hidden
                 hr
                     width: 40%
                     background: #444
@@ -682,44 +706,11 @@ footer
                     background: -o-linear-gradient(left, transparent 0%,#444 50%,transparent 100%)
                     background: -webkit-linear-gradient(left, transparent 0%,#444 50%,transparent 100%)
                     background: -ms-linear-gradient(left, transparent 0%,#444 50%,transparent 100%)
-            // img
-            //     @include responsive_system(4,4,4,4)
-                
-        // .cell
-        //     @extend .text-center
-        //     width: 100%
-        //     min-height: 300px
-        //     height: auto
-        //     margin-top: 60px
-            
-        //     padding: 0% 30px 0% 30px
-        //     .line:first-child
-                
-        //     .avatar
-        //         @include border_radius(100%)
-        //         height: 200px
-        //         width: 200px
-        //         border: none
-        //         background:
-        //             size: cover
-        //             position: top
-        //     .socialPanelist
-        //         @extend .row
-        //         background: solid 2px #000
-        //         .contentAux
-        //             width: 80%
-        //             img
-        //                 @extend .transitions
-        //                 cursor: pointer
-        //                 width: 20px
-        //                 margin: 10px
-        //                 &:hover
-        //                     width: 15px !important
-        // @for $i from 1 through $__AMOUNT__panelist_
-        //     .cell:nth-child(#{$i})
-        //         .avatar
-        //             background: url("../../img_new/palestrantes/#{nth($__IMAGE__panelist_, $i)}") !important
-                    
+                .line
+                    img
+                        width: 40px
+                        margin-top: 10px
+
 //+++++++++++++++++++++End of Index04++++++++++++++//
 
 //+++++++++++++++++++++Index05+++++++++++++++++++++//
