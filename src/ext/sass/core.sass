@@ -429,6 +429,21 @@ header
         background: none
         content: ""
         border: none
+        .alternative
+            @extend .transitions
+            @include border_radius(7px)
+            text:
+                transform: uppercase
+            border: solid 2px #fff
+            height: 40px
+            margin-top: 5px
+            &:hover
+                background: #fff
+            a
+                margin-top: -7px //Top margin + border size
+                font-weight: bold !important
+            // height: 30px
+
         .navbar-nav
             li 
                 a
@@ -504,10 +519,11 @@ footer
         &:last-child
             @include responsive_system(8,8,12,12)
             @extend .text-center
-    
+
     //FOOTER FIRST LINE//
     .line:last-child
         margin-top: 30px
+        
         
         //CONTACT INFORMATIONS AREA//
         .subFooter:first-child
@@ -711,9 +727,9 @@ footer
     padding: $__PADDING-DEFAULT__
     height: auto
     .subIndex07
-        height: 400px
-        width: 100%
-        background: #1800cc
+        iframe
+            width: 100%
+            height: 400px
 //+++++++++++++++++++++End of Index05++++++++++++++//
 
 //-------------------------------------------------------------------------------//
@@ -723,12 +739,15 @@ footer
 
 //----------------------------------[ RESPONSIVE COND. ]-------------------------//
 @media screen and (min-width: 1921px)
+    ///[FONTS]////////////////////////////////////////////////////////
     h1
         font-size: 10em !important
     h2
         font-size: 14em !important
+    //////////////////////////////////////////////////////////////////
 
 @media screen and (max-width: 1750px) and (min-width: 1550px)
+    ///[FONTS]////////////////////////////////////////////////////////
     h1
         font-size: 5em !important
     h2
@@ -745,8 +764,10 @@ footer
         .subIndex03
             p
                 text-align: left !important
+    //////////////////////////////////////////////////////////////////
 
 @media screen and (max-width: 1549px) and (min-width: 1350px)
+    ///[FONTS]////////////////////////////////////////////////////////
     h1
         font-size: 5em !important
     h2
@@ -763,12 +784,15 @@ footer
         .subIndex03
             p
                 text-align: left !important
+    //////////////////////////////////////////////////////////////////
 
 @media screen and (max-width: 1349px) and (min-width: 1200px)
+    ///[FONTS]////////////////////////////////////////////////////////
     h1
         font-size: 5em !important
     h2
         font-size: 1.8em !important
+    ///[HEADER]///////////////////////////////////////////////////////
     header
         .headerContent
             @include transform_translateY(60%)
@@ -787,12 +811,15 @@ footer
             img
                 width: 80% !important
                 height: 70px !important
+    //////////////////////////////////////////////////////////////////
 
 @media screen and (max-width: 1199px) and (min-width: 992px)
+    ///[FONTS]////////////////////////////////////////////////////////
     h1
         font-size: 3.5em !important
     h2
         font-size: 1.8em !important
+    ///[HEADER]///////////////////////////////////////////////////////
     header
         h1
             &[class="s0"]
@@ -812,12 +839,17 @@ footer
             img
                 width: 80% !important
                 height: 70px !important
+    //////////////////////////////////////////////////////////////////
 
 @media screen and (max-width: 991px) and (min-width: 768px)
+    ///[FONTS]////////////////////////////////////////////////////////
     h1
         font-size: 3.5em !important
     h2
         font-size: 1.8em !important
+    a
+        font-size: 0.9em !important
+    ///[HEADER]///////////////////////////////////////////////////////
     header
         h1
             &[class="s0"]
@@ -829,6 +861,14 @@ footer
             p
                 text-align: center !important
             padding: 3% 7% 3% 7%
+    #index05
+        .subIndex05
+            padding-left: 0px !important
+            padding: 0px !important
+            &:last-child
+                margin-top: 5% !important
+            iframe
+                width: 70%
     input, textarea, select
         height: 50px !important
         font-size: 1.2em !important
@@ -853,12 +893,16 @@ footer
                     text-align: center !important
             .subFooter:last-child
                 text-align: center !important
+    
+    //////////////////////////////////////////////////////////////////
 
 @media screen and (max-width: 767px) and (min-width: 550px)
+    ///[FONTS]////////////////////////////////////////////////////////
     h1
         font-size: 2.5em !important
     h2
         font-size: 1.8em !important
+    ///[HEADER]///////////////////////////////////////////////////////
     header
         .headerContent
             @include transform_translateY(150%)
@@ -873,7 +917,25 @@ footer
             .subMenu
                 &:after
                     display: none !important
+    #index01
+        padding: $__PADDING-RESPONSIVE__
     #index03
+        padding: $__PADDING-RESPONSIVE__
+    #index04
+        padding: $__PADDING-RESPONSIVE__
+    #index05
+        padding: $__PADDING-RESPONSIVE__
+        .subIndex05
+            padding-left: 0px !important
+            padding: 0px !important
+            &:last-child
+                margin-top: 5% !important
+            iframe
+                width: 90% !important
+    #index06
+        padding: $__PADDING-RESPONSIVE__
+    #index07
+        padding: $__PADDING-RESPONSIVE__
         p
             text-align: center !important
         .subIndex03
@@ -902,13 +964,15 @@ footer
                     text-align: center !important
             .subFooter:last-child
                 text-align: center !important
-
+    //////////////////////////////////////////////////////////////////
 
 @media screen and (max-width: 549px) and (min-width: 350px)
+    ///[FONTS]////////////////////////////////////////////////////////
     h1
         font-size: 1.3em !important
     h2
         font-size: 1.8em !important
+    ///[HEADER]///////////////////////////////////////////////////////
     header
         .headerContent
             @include transform_translateY(150%)
@@ -924,10 +988,29 @@ footer
                 &:after
                     display: none !important
     #index03
+        padding: $__PADDING-RESPONSIVE__
         .subIndex03
             p
                 text-align: center !important
             padding: 3% 7% 3% 7%
+    #index01
+        padding: $__PADDING-RESPONSIVE__
+    #index04
+        padding: $__PADDING-RESPONSIVE__
+    #index05
+        padding: $__PADDING-RESPONSIVE__
+        .subIndex05
+            padding-left: 0px !important
+            padding: 0px !important
+            &:last-child
+                margin-top: 5% !important
+            iframe
+                height: 150px !important
+                width: 100% !important
+    #index06
+        padding: $__PADDING-RESPONSIVE__
+    #index07
+        padding: $__PADDING-RESPONSIVE__
     input, textarea, select
         height: 40px !important
         font-size: 1em !important
@@ -952,15 +1035,17 @@ footer
                     text-align: center !important
             .subFooter:last-child
                 text-align: center !important
-
+    //////////////////////////////////////////////////////////////////
 
 @media screen and (max-width: 349px)
+    ///[FONTS]////////////////////////////////////////////////////////
     h1
         font-size: 1.3em !important
     h2
         font-size: 1.2em !important
     p
         font-size: 1em !important
+    ///[HEADER]///////////////////////////////////////////////////////
     header
         .headerContent
             @include transform_translateY(150%)
@@ -975,14 +1060,28 @@ footer
             .subMenu
                 &:after
                     display: none !important
+    ///[INDEX03]//////////////////////////////////////////////////////
     #index03
+        padding: $__PADDING-RESPONSIVE__
         .subIndex03
             p
                 text-align: center !important
             padding: 3% 7% 3% 7%
+    #index01
+        padding: $__PADDING-RESPONSIVE__
+    #index04
+        padding: $__PADDING-RESPONSIVE__
+    #index05
+        padding: $__PADDING-RESPONSIVE__
+    #index06
+        padding: $__PADDING-RESPONSIVE__
+    #index07
+        padding: $__PADDING-RESPONSIVE__
+    ///[FORMS]////////////////////////////////////////////////////////
     input, textarea, select
         height: 40px !important
         font-size: 1em !important
+    ///[FOOTER]///////////////////////////////////////////////////////
     footer
         padding: 10px !important
         textarea
@@ -1004,5 +1103,6 @@ footer
                     text-align: center !important
             .subFooter:last-child
                 text-align: center !important
+    //////////////////////////////////////////////////////////////////
 
 //-------------------------------------------------------------------------------//
