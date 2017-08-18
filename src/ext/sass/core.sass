@@ -631,45 +631,94 @@ footer
     background: $__COLOR__dark-gray_
     .subIndex04
         @include responsive_system(4,4,6,12)
-        padding: 5%
         .cell
+            margin-top: 100px
             @extend .text-center
-            width: 100%
-            min-height: 300px
-            height: auto
-            margin-top: 60px
+            width: 80%
+            height: 250px
+            padding: 6%
             background: #396afc
             background: linear-gradient(to right, #2948ff, #396afc)
             background: -ms-linear-gradient(to right, #2948ff, #396afc)
             background: -moz-linear-gradient(to right, #2948ff, #396afc)
             background: -webkit--linear-gradient(to right, #2948ff, #396afc)
-            padding: 0% 30px 0% 30px
-            .line:first-child
-                @include transform_translateY(-50%)
+            h4
+                max-height: 40px !important
+            .avatar-palestrante-01
+                background: url(../../img_new/palestrantes/05.jpg)
+            .avatar-palestrante-02
+                background: url(../../img_new/palestrantes/05.jpg)
+            .avatar-palestrante-03
+                background: url(../../img_new/palestrantes/05.jpg)
+            .avatar-palestrante-04
+                background: url(../../img_new/palestrantes/05.jpg)
+            .avatar-palestrante-05
+                background: url(../../img_new/palestrantes/05.jpg)
+            .avatar-palestrante-06
+                background: url(../../img_new/palestrantes/05.jpg)
+            .avatar-palestrante-07
+                background: url(../../img_new/palestrantes/05.jpg)
+            .avatar-palestrante-08
+                background: url(../../img_new/palestrantes/05.jpg)
+            .avatar-palestrante-09
+                background: url(../../img_new/palestrantes/05.jpg)
+
             .avatar
                 @include border_radius(100%)
+                @include transform_translateY(-60%)
                 height: 200px
                 width: 200px
                 border: none
                 background:
                     size: cover
                     position: top
-            .socialPanelist
-                @extend .row
-                background: solid 2px #000
-                .contentAux
-                    width: 80%
-                    img
-                        @extend .transitions
-                        cursor: pointer
-                        width: 20px
-                        margin: 10px
-                        &:hover
-                            width: 15px !important
-        @for $i from 1 through $__AMOUNT__panelist_
-            .cell:nth-child(#{$i})
-                .avatar
-                    background: url("../../img_new/palestrantes/#{nth($__IMAGE__panelist_, $i)}") !important
+            .line
+                @include transform_translateY(-150%)
+                hr
+                    width: 40%
+                    background: #444
+                    background: linear-gradient(left, transparent 0%,#444 50%,transparent 100%)
+                    background: -moz-linear-gradient(left, transparent 0%,#444 50%,transparent 100%)
+                    background: -o-linear-gradient(left, transparent 0%,#444 50%,transparent 100%)
+                    background: -webkit-linear-gradient(left, transparent 0%,#444 50%,transparent 100%)
+                    background: -ms-linear-gradient(left, transparent 0%,#444 50%,transparent 100%)
+            // img
+            //     @include responsive_system(4,4,4,4)
+                
+        // .cell
+        //     @extend .text-center
+        //     width: 100%
+        //     min-height: 300px
+        //     height: auto
+        //     margin-top: 60px
+            
+        //     padding: 0% 30px 0% 30px
+        //     .line:first-child
+                
+        //     .avatar
+        //         @include border_radius(100%)
+        //         height: 200px
+        //         width: 200px
+        //         border: none
+        //         background:
+        //             size: cover
+        //             position: top
+        //     .socialPanelist
+        //         @extend .row
+        //         background: solid 2px #000
+        //         .contentAux
+        //             width: 80%
+        //             img
+        //                 @extend .transitions
+        //                 cursor: pointer
+        //                 width: 20px
+        //                 margin: 10px
+        //                 &:hover
+        //                     width: 15px !important
+        // @for $i from 1 through $__AMOUNT__panelist_
+        //     .cell:nth-child(#{$i})
+        //         .avatar
+        //             background: url("../../img_new/palestrantes/#{nth($__IMAGE__panelist_, $i)}") !important
                     
 //+++++++++++++++++++++End of Index04++++++++++++++//
 
