@@ -442,6 +442,7 @@ header
             border: solid 2px #fff
             height: 40px
             margin-top: 5px
+            margin-left: 5px
             &:hover
                 background: #fff
             a
@@ -498,6 +499,9 @@ header
                     @include transform_translateY(-14.5%)
                     text-align: right !important
                     font-size: 20em //!important
+            p
+                color: #FFF
+                font-size: 1.3em !important
 
 
 //++++++++++++++++++End of header++++++++++++++++++//
@@ -568,6 +572,7 @@ footer
     height: auto
     background: #f3f3f3//#afc3fd
     margin-top: -5%
+    padding-top: 100px !important
     .subIndex01
         @include responsive_system(4,4,12,12)
         &:first-child
@@ -582,6 +587,8 @@ footer
         &:first-child, &:last-child
             @extend .hidden-sm
             @extend .hidden-xs
+        .titleSection
+            padding-top: 30%
         p
             text-align: center !important
         .fix
@@ -650,41 +657,41 @@ footer
             h4
                 max-height: 40px !important
             .avatar-palestrante-01
-                background: url(../../img_new/palestrantes/05.jpg)
+                background: url(../../img_new/palestrantes/gesil.jpg)
             .avatar-palestrante-02
                 background: url(../../img_new/palestrantes/02.jpe)
             .avatar-palestrante-03
-                background: url(../../img_new/palestrantes/03.gif)
+                background: url(../../img_new/palestrantes/#) 
             .avatar-palestrante-04
-                background: url(../../img_new/palestrantes/05.jpg)
+                background: url(../../img_new/palestrantes/03.gif) //certo
             .avatar-palestrante-05
-                background: url(../../img_new/palestrantes/05.jpg)
+                background: url(../../img_new/palestrantes/05.jpg) //certo
             .avatar-palestrante-06
-                background: url(../../img_new/palestrantes/06.gif)
-            .avatar-palestrante-07
-                background: url(../../img_new/palestrantes/07.gif)
+                background: url(../../img_new/palestrantes/06.gif) //certo
             .avatar-palestrante-08
-                background: url(../../img_new/palestrantes/05.jpg)
+                background: url(../../img_new/palestrantes/07.gif) //certo
             .avatar-palestrante-09
-                background: url(../../img_new/palestrantes/09.gif)
+                background: url(../../img_new/palestrantes/#)
             .avatar-palestrante-10
-                background: url(../../img_new/palestrantes/10.gif)
+                background: url(../../img_new/palestrantes/09.gif) //certo
             .avatar-palestrante-11
-                background: url(../../img_new/palestrantes/11.gif)
+                background: url(../../img_new/palestrantes/10.gif) //certo
             .avatar-palestrante-12
-                background: url(../../img_new/palestrantes/12.gif)
+                background: url(../../img_new/palestrantes/11.gif) //certo
             .avatar-palestrante-13
-                background: url(../../img_new/palestrantes/13.jpg)
+                background: url(../../img_new/palestrantes/12.gif) //certo
             .avatar-palestrante-14
-                background: url(../../img_new/palestrantes/14.gif)
+                background: url(../../img_new/palestrantes/13.jpg) //certo
             .avatar-palestrante-15
-                background: url(../../img_new/palestrantes/19.gif)
+                background: url(../../img_new/palestrantes/14.gif)
             .avatar-palestrante-16
                 background: url(../../img_new/palestrantes/16.jpg)
             .avatar-palestrante-17
-                background: url(../../img_new/palestrantes/17.gif)
-            .avatar-palestrante-18
                 background: url(../../img_new/palestrantes/18.jpg)
+                background-position: top right 10% !important
+                background-size: 300% !important
+            .avatar-palestrante-18
+                background: url(../../img_new/palestrantes/19.gif) //certo
 
             .avatar
                 @include border_radius(100%)
@@ -869,6 +876,8 @@ footer
         h1
             &[class="s0"]
                 font-size: 14em !important
+        a
+            font-size: 1.0em !important
     #index03
         iframe
             text-align: center !important
@@ -900,7 +909,11 @@ footer
             &[class="s0"]
                 font-size: 14em !important
         .navbar-brand
-            font-size: 0.8em !important
+            font-size: 0.6em !important
+        a
+            font-size: 0.9em !important
+        .alternative
+            border: 0px
     #index03
         .subIndex03
             p
