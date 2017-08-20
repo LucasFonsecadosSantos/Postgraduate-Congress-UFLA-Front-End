@@ -207,15 +207,6 @@ section#index04
                         div.line
                             a(href="http://lattes.cnpq.br/9956829222003643")
                                 img(src="img_new/icons/lates.svg")
-            div.subIndex04
-                div.cell
-                    div.avatar.avatar-palestrante-08
-                    div.cellContent
-                        hr
-                        h4 Renato Paiva
-                        div.line
-                            a(href="http://lattes.cnpq.br/2032317380293711")
-                                img(src="img_new/icons/lates.svg")
             ///////////////////////////////////////////////////////
 
             div.subIndex04
@@ -335,10 +326,10 @@ section#index06
                 div.subIndex06
                     input(type="name", name="nome", id="nome" ,placeholder="Qual é o seu nome?", title="Insira seu nome aqui.", alt="Campo para inserir seu nome.")                    
                     //Vinculado Iniciacao Cientifica, value=0
-                    select(name="bic_jr", id="bic_jr", placeholder="", title="", alt="", type="hidden", value="0",style=" display: hidden !important")
-                        option(type="hidden", value="0", selected, style="display: hidden !important")
                 div.subIndex06
                     input(type="text",name="cpf",id="cpf",size=11 ,maxlength="11", placeholder="Digite seu cpf", title="Digite seu cpf", alt="Campo para inserir seu cpf.")
+            input(name="bic_jr", id="bic_jr", placeholder="", title="", alt="", type="hidden", value="0",style=" display: hidden !important")
+            input(type="hidden", value="0", selected, style="display: hidden !important")
             div.line.content.fix                 
                 input(type="email", name="email", id="email",placeholder="Qual é o seu email?", title="Insira seu email aqui.", alt="Campo para inserir seu email.")
             div.line
@@ -353,7 +344,7 @@ section#index06
                 div.subIndex06
                     input(type="text",name="mat" ,id="mat", placeholder="Digite sua matricula", title="Digite sua matricula", alt="Campo para inserir sua matricula.")
                     input#inst1.inst(name="inst", value="1", type="hidden", checked)
-            div.line
+            div.line.fix
                 select(name="curso",id="curso")
                     option(value="0", id="cur0", selected) -- Selecione um Curso --
                     option(id="cur75", value='75') Doutorado em Administração (PPGA)
