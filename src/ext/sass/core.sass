@@ -551,11 +551,14 @@ footer
                     @extend .img-responsive
                     width: 95%
                     height: 80px
-                    background: #000
+                    background: transparent
                     border: none !important
                     cursor: pointer
+                    &[class="fixImg"]
+                        margin-top: 25px
+                        height: 50% !important
     p
-        color: rgba(255,255,255,0.5)
+        color: rgba(255,255,255,0.8)
 
 #copyright
     background: $__COLOR__light-gray_ !important
@@ -661,7 +664,9 @@ footer
             .avatar-palestrante-02
                 background: url(../../img_new/palestrantes/02.jpe)
             .avatar-palestrante-03
-                background: url(../../img_new/palestrantes/#) 
+                background: url(../../img_new/palestrantes/geraldao.jpg) 
+                background-position: bottom right 60% !important
+                background-size: 300% !important
             .avatar-palestrante-04
                 background: url(../../img_new/palestrantes/03.gif) //certo
             .avatar-palestrante-05
@@ -686,6 +691,7 @@ footer
                 background: url(../../img_new/palestrantes/14.gif)
             .avatar-palestrante-16
                 background: url(../../img_new/palestrantes/16.jpg)
+
             .avatar-palestrante-17
                 background: url(../../img_new/palestrantes/18.jpg)
                 background-position: top right 10% !important
@@ -710,6 +716,7 @@ footer
                     max-height: 41px
                     min-height: 41px
                     overflow: hidden
+                    text-transform: capitalize !important
                 hr
                     width: 40%
                     background: #444
