@@ -213,6 +213,25 @@ h4
     &:first-letter
         text-transform: uppercase
 h5
+    position: relative
+    font:
+        family: $__FONT__text1_
+        weight: 800
+        size: 3.7em
+    text-transform: uppercase
+    color: $__COLOR__light-blue_
+    margin: 0px
+h6
+    position: relative
+    font:
+        family: $__FONT__text1_
+        weight: 400
+        size: 1.3em
+    text-transform: lowercase
+    color: $__COLOR__light-blue_
+    margin: 0px
+    margin-bottom: 40px
+    
 label
 a
     font:
@@ -698,6 +717,8 @@ footer
                 background-size: 300% !important
             .avatar-palestrante-18
                 background: url(../../img_new/palestrantes/19.gif) //certo
+            .avatar-palestrante-AUX01
+                background: url(../../img_new/palestrantes/marcelo.png) //certo
 
             .avatar
                 @include border_radius(100%)
@@ -732,6 +753,42 @@ footer
 
 //+++++++++++++++++++++End of Index04++++++++++++++//
 
+#indexAUX
+    padding: $__PADDING-DEFAULT__
+    min-height: $__HEIGHT__index05_
+    height: auto
+    background: #f3f3f3
+    .subIndexAUX
+        @include responsive_system(3,3,6,12)
+        @extend .text-center
+        .infoDate
+            @include border_radius(100%)
+            @extend .text-center
+            @extend .transitions
+            padding: 6%
+            padding-top: 9%
+            width: 170px
+            height: 170px
+            margin-bottom: 20px
+            border: solid 6px $__COLOR__light-blue_
+            &:hover
+                cursor: default
+            h5
+                margin: 0px !important
+                padding: 0px !important
+            p
+                margin: 0px !important
+                text-align: center !important
+                padding: 0px !important
+                margin-bottom: -10px !important
+                span
+
+    .fixing
+        p
+            margin-top: 60px
+        button
+            margin-top: 60px
+        
 //+++++++++++++++++++++Index05+++++++++++++++++++++//
 #index05
     padding: $__PADDING-DEFAULT__
